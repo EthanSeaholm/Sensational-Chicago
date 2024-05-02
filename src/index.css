@@ -71,7 +71,7 @@
   display: grid;
   place-items: center;
   position: relative;
-  margin-top: 18px;
+  margin-top: 30px;
   margin-bottom: 30px;
   font-size: 30px;
   max-width: 100%;
@@ -94,8 +94,6 @@
 
 .video-player {
   max-width: 100%;
-  /* width: 100%;
-  height: auto; */
   width: 840px;
   height: 473px;
   margin-bottom: 40px;
