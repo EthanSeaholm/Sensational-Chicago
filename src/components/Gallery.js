@@ -1,5 +1,5 @@
 import NavBar from "./NavBar";
-import PageTitle from "./PageTitle";
+import PageTitle from "./PageTitle";    // currently unused
 import Footer from "./Footer";
 
 import photo1 from "../gallery-resources/photos/p1.jpg";
@@ -18,6 +18,13 @@ import photo13 from "../gallery-resources/photos/p13.JPG";
 import photo14 from "../gallery-resources/photos/p14.jpg";
 import photo15 from "../gallery-resources/photos/p15.jpg";
 import { useState } from "react";
+
+/**
+ * This component renders the Gallery page.
+ * It includes photos that, when clicked, are enlarged and can be toggled back to their original size.
+ * When a photo is enlarged, a description and close button are conditionally rendered for the enlarged photo.
+ * When an enlarged photo is closed, the Gallery page is once again rendered, returning the user back to the gallery view.
+ */
 
 const photos = [
   {
@@ -125,7 +132,7 @@ export default function Gallery() {
   return (
     <div>
       <NavBar />
-      {isEnlarged ? (
+      {isEnlarged ? (   // if a photo is enlarged, renders the EnlargedPhoto component for that photo and hides Footer
         <EnlargedPhoto
           photo={photos.find((photo) => photo.id === selectedId).photoLink}
           description={
@@ -133,9 +140,8 @@ export default function Gallery() {
           }
           onClose={handleCloseEnlargedPhoto}
         />
-      ) : (
+      ) : (   // if no photos are enlarged or an enlarged photo is closed, renders the gallery and shows Footer
         <>
-          {/* <PageTitle currentLocation="/gallery" /> */}
           <PhotosList photos={photos} onEnlargePhoto={handleEnlargePhoto} />
           <Footer />
         </>
@@ -144,11 +150,11 @@ export default function Gallery() {
   );
 }
 
-function PhotosList({ photos, onEnlargePhoto }) {
+function PhotosList({ photos, onEnlargePhoto }) {   // props: photos, onEnlargePhoto
   return (
     <ul className="gallery">
-      {photos.map((photo) => (
-        <Photo
+      {photos.map((photo) => (    // maps each photo to a Photo component
+        <Photo    // renders a Photo component for each photo
           photo={photo.photoLink}
           description={photo.description}
           key={photo.id}
@@ -159,7 +165,7 @@ function PhotosList({ photos, onEnlargePhoto }) {
   );
 }
 
-function Photo({ photo, description, onClick }) {
+function Photo({ photo, description, onClick }) {   // props: photo, description, onClick
   return (
     <li>
       <img src={photo} alt={description} onClick={onClick} />
@@ -167,7 +173,7 @@ function Photo({ photo, description, onClick }) {
   );
 }
 
-function EnlargedPhoto({ photo, description, onClose }) {
+function EnlargedPhoto({ photo, description, onClose }) {   // props: photo, description, onClose
   return (
     <>
       <div className="enlarged-photo-container">
