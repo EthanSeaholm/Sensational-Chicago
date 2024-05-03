@@ -9,6 +9,11 @@ import Gallery from "./components/Gallery";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+/**
+ * This React Application is routed via React Router.
+ * The main routes include the Homepage, Links page, and Gallery page.
+ */
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +31,11 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+/**
+ * Entry point for the React application, bootstraps and renders the root component.
+ * StrictMode is used to catch potential erorrs during development. It will not be present in production.
+ */
 
 root.render(
   <React.StrictMode>

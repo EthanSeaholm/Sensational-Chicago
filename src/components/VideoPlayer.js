@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 /**
  * This component renders the homepage including a YouTube video player containing Sensational Chicago's latest video and its title.
  * While data is being fetched from the YouTube API, a loader placeholder is conditionally rendered.
- * @returns {ReactNode} A React element that renders a YouTube video player containing the latest video and its title from Sensational Chicago's YouTube channel.
+ * @returns {ReactNode} A React element that renders a YouTube video player containing Sensational Chicago's latest video and its title.
  */
 
 export default function VideoPlayer() {
@@ -25,25 +25,27 @@ export default function VideoPlayer() {
 
   useEffect(
     function () {
-      const controller = new AbortController(); // early AbortController implementation in case of future searchable video functionality
+      const controller = new AbortController(); // early AbortController implementation in case of future searchable video feature
 
+      // fetches Sensational Chicago's latest video and its title
       async function fetchVid() {
         try {
           const res = await fetch(
             `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=1&playlistId=${playlistId}&key=${apiKey}`,
             { signal: controller.signal }
-          ); // fetches Sensational Chicago's latest video and its title
+          );
 
           await new Promise((resolve) => setTimeout(resolve, 1500)); // sets a short timeout to ensure loader is rendered briefly
 
+          // if an error occurs while fetching data from the YouTube API, the error message is rendered
           if (!res.ok)
-            // if an error occurs while fetching data from the YouTube API, the error message is rendered
             throw new Error(
               "Something went wrong with fetching our latest video"
             );
 
+          // if fetching data from the YouTube API returns nothing, the error message is rendered
           const data = await res.json();
-          if (data.items.length === 0) throw new Error("No videos found"); // if fetching data from the YouTube API returns nothing, the error message is rendered
+          if (data.items.length === 0) throw new Error("No videos found");
 
           const latestVideo = data.items[0];
           const latestVideoTitle = latestVideo.snippet.title;

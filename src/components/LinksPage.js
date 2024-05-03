@@ -1,5 +1,5 @@
 import NavBar from "./NavBar";
-import PageTitle from "./PageTitle";    // currently unused
+import PageTitle from "./PageTitle"; // currently unused
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +15,8 @@ import {
  * The Full-Length Videos list renders media links for Sensational Chicago's full-length skateboarding videos.
  */
 
-const socials = [   // array of objects containing social media information
+const socials = [
+  // array of objects containing social media information
   {
     id: "sensationalChicago",
     user: "Sensational Chicago",
@@ -60,7 +61,8 @@ const socials = [   // array of objects containing social media information
   },
 ];
 
-const fullLengthVideos = [    // array of objects containing full-length video information
+const fullLengthVideos = [
+  // array of objects containing full-length video information
   {
     id: "nowadays",
     video: "NOWADAYS",
@@ -94,61 +96,77 @@ export default function LinksPage() {
   );
 }
 
-function SocialsList({ users }) {   // prop: users
+function SocialsList({ users }) {
+  // prop: users
   return (
     <ul className="links-list">
-      {users.map((user) => (    // maps each user to a Socials component
-        <Socials    // renders a Socials component for each user
-          user={user.user}
-          key={user.id}
-          instagramUrl={user.instagramUrl}
-          youtubeUrl={user.youtubeUrl}
-        />
-      ))}
+      {users.map(
+        (
+          user // maps each user to a Socials component
+        ) => (
+          <Socials // renders a Socials component for each user
+            user={user.user}
+            key={user.id}
+            instagramUrl={user.instagramUrl}
+            youtubeUrl={user.youtubeUrl}
+          />
+        )
+      )}
     </ul>
   );
 }
 
-function Socials({ user, instagramUrl, youtubeUrl }) {    // props: user, instagramUrl, youtubeUrl
-  return (    // renders a Socials component for each mapped user via passed in props
+function Socials({ user, instagramUrl, youtubeUrl }) {
+  // props: user, instagramUrl, youtubeUrl
+  return (
+    // renders a Socials component for each mapped user via passed in props
     <>
       <li>
         <div>
           {instagramUrl && (
             <Link to={instagramUrl} target="_blank">
-              <FontAwesomeIcon className="instagram-icon" icon={faInstagram} />   {/* displays Instagram icon if present */}
+              <FontAwesomeIcon className="instagram-icon" icon={faInstagram} />{" "}
+              {/* displays Instagram icon if present */}
             </Link>
           )}
           {youtubeUrl && (
             <Link to={youtubeUrl} target="_blank">
-              <FontAwesomeIcon className="youtube-icon" icon={faYoutube} />   {/* displays YouTube icon if present */}
+              <FontAwesomeIcon className="youtube-icon" icon={faYoutube} />{" "}
+              {/* displays YouTube icon if present */}
             </Link>
           )}
-          <span>{user}</span>   {/* displays user */}
+          <span>{user}</span> {/* displays user */}
         </div>
       </li>
     </>
   );
 }
 
-function FullLengthVideosList({ videos }) {   // prop: videos
+function FullLengthVideosList({ videos }) {
+  // prop: videos
   return (
     <ul className="links-list">
-      {videos.map((video) => (    // maps each video to a FullLengthVideos component
-        <FullLengthVideos   // renders a FullLengthVideos component for each video
-          video={video.video}
-          year={video.year}
-          key={video.id}
-          youtubeUrl={video.youtubeUrl}
-          vimeoUrl={video.vimeoUrl}
-        />
-      ))}
+      {videos.map(
+        (
+          video // maps each video to a FullLengthVideos component
+        ) => (
+          <FullLengthVideos // renders a FullLengthVideos component for each video
+            video={video.video}
+            year={video.year}
+            key={video.id}
+            youtubeUrl={video.youtubeUrl}
+            vimeoUrl={video.vimeoUrl}
+          />
+        )
+      )}
     </ul>
   );
 }
 
-function FullLengthVideos({ video, year, youtubeUrl, vimeoUrl }) {    // props: video, year, youtubeUrl, vimeoUrl
-  return (    // renders a FullLengthVideos component for each mapped video via passed in props
+function FullLengthVideos({ video, year, youtubeUrl, vimeoUrl }) {
+  // props: video, year, youtubeUrl, vimeoUrl
+  return (
+    // renders a FullLengthVideos component for each mapped video via passed in props
     <>
       <li>
         <div className="video-link-container">
@@ -159,10 +177,12 @@ function FullLengthVideos({ video, year, youtubeUrl, vimeoUrl }) {    // props: 
               className="full-length-video-links"
             >
               <span>
-                <FontAwesomeIcon className="youtube-icon" icon={faYoutube} />   {/* displays YouTube icon if present */}
+                <FontAwesomeIcon className="youtube-icon" icon={faYoutube} />{" "}
+                {/* displays YouTube icon if present */}
                 {video}
                 <span>
-                  <i>{`(${year})`}</i>    {/* displays video title and release year */}
+                  <i>{`(${year})`}</i>{" "}
+                  {/* displays video title and release year */}
                 </span>
               </span>
             </Link>
@@ -174,7 +194,8 @@ function FullLengthVideos({ video, year, youtubeUrl, vimeoUrl }) {    // props: 
               className="full-length-video-links"
             >
               <span>
-                <FontAwesomeIcon className="vimeo-icon" icon={faVimeo} />   {/* displays Vimeo icon if present*/}
+                <FontAwesomeIcon className="vimeo-icon" icon={faVimeo} />{" "}
+                {/* displays Vimeo icon if present*/}
                 {video}
               </span>
               <span>

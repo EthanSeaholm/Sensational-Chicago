@@ -139,6 +139,7 @@
   border-color: rgb(80, 80, 80);
   font-style: italic;
   margin-top: 0;
+  cursor: pointer;
 }
 
 .links-list li {
@@ -211,7 +212,7 @@
 
 .gallery img {
   list-style: none;
-  max-width: 90%;
+  max-width: 85%;
   height: auto;
   display: block;
   margin: auto;
@@ -224,7 +225,6 @@
 .gallery img:hover {
   transition: 0.2s ease;
   border: 2px solid red;
-
 }
 
 .enlarged-photo-container {

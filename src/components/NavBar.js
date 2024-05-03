@@ -8,12 +8,12 @@ import { Link, useLocation } from "react-router-dom";
  */
 
 export default function NavBar() {
-  const location = useLocation();   // returns the user's location according to the current URL for dynamic styling purposes
+  const location = useLocation(); // returns the user's location according to the current URL for dynamic styling purposes
 
   return (
     <>
       <nav>
-        {location.pathname === "/" ? (    // if the user is on the homepage, render "slimesational" logo
+        {location.pathname === "/" ? ( // if the user is on the homepage, render "slimesational" logo
           <div className="slimesational-logo">
             <img
               src="/slimesational.png"
@@ -21,7 +21,8 @@ export default function NavBar() {
               style={{ width: "353px", height: "auto" }}
             />
           </div>
-        ) : (   // if the user is not on the homepage, render "trapdoor" logo
+        ) : (
+          // if the user is not on the homepage, render "trapdoor" logo
           <Link to="/" className="trapdoor">
             <img
               src="/trapdoor_orig.png"
@@ -33,7 +34,7 @@ export default function NavBar() {
         <ul className="navbar">
           <li>
             <a
-              href="https://www.youtube.com/@sensationalchi"    // external link to Sensational Chicago YouTube channel
+              href="https://www.youtube.com/@sensationalchi" // external link to Sensational Chicago YouTube channel
               target="blank"
               rel="noopener noreferrer"
             >
@@ -42,7 +43,7 @@ export default function NavBar() {
           </li>
           <li>
             <a
-              href="https://sensationalchicago.bigcartel.com/"    // external link to Sensational Chicago merchandise shop
+              href="https://sensationalchicago.bigcartel.com/" // external link to Sensational Chicago merchandise shop
               target="blank"
               rel="noopener noreferrer"
             >
@@ -51,8 +52,10 @@ export default function NavBar() {
           </li>
           <li>
             <Link
-              to="/links"   // internal link to Links page
-              className={location.pathname === "/links" ? "navbar-active" : "white-text"}   /* if the user is currently on the links page,
+              to="/links" // internal link to Links page
+              className={
+                location.pathname === "/links" ? "navbar-active" : "white-text"
+              } /* if the user is currently on the links page,
               the "Links" text in the navbar changes color to visually indicate the user's current location */
             >
               Links
@@ -60,8 +63,12 @@ export default function NavBar() {
           </li>
           <li>
             <Link
-              to="/gallery"   // internal link to Gallery page
-              className={location.pathname === "/gallery" ? "navbar-active" : "white-text"} /* if user is currently on the gallery page,
+              to="/gallery" // internal link to Gallery page
+              className={
+                location.pathname === "/gallery"
+                  ? "navbar-active"
+                  : "white-text"
+              } /* if user is currently on the gallery page,
               the "Gallery" text in the navbar changes color to visually indicate the user's current location */
             >
               Gallery
