@@ -37,6 +37,7 @@ export default function NavBar() {
               href="https://www.youtube.com/@sensationalchi" // external link to Sensational Chicago YouTube channel
               target="blank"
               rel="noopener noreferrer"
+              className="white-text"
             >
               YouTube
             </a>
@@ -46,6 +47,7 @@ export default function NavBar() {
               href="https://sensationalchicago.bigcartel.com/" // external link to Sensational Chicago merchandise shop
               target="blank"
               rel="noopener noreferrer"
+              className="white-text"
             >
               Merch
             </a>
