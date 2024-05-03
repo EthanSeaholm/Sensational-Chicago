@@ -1,5 +1,4 @@
 import NavBar from "./NavBar";
-import PageTitle from "./PageTitle";    // currently unused
 import Footer from "./Footer";
 
 import photo1 from "../gallery-resources/photos/p1.jpg";
@@ -132,7 +131,7 @@ export default function Gallery() {
   return (
     <div>
       <NavBar />
-      {isEnlarged ? (   // if a photo is enlarged, renders the EnlargedPhoto component for that photo and hides Footer
+      {isEnlarged ? ( // if a photo is enlarged, renders the EnlargedPhoto component for that photo and hides Footer
         <EnlargedPhoto
           photo={photos.find((photo) => photo.id === selectedId).photoLink}
           description={
@@ -140,7 +139,8 @@ export default function Gallery() {
           }
           onClose={handleCloseEnlargedPhoto}
         />
-      ) : (   // if no photos are enlarged or an enlarged photo is closed, renders the gallery and shows Footer
+      ) : (
+        // if no photos are enlarged or an enlarged photo is closed, renders the gallery and shows Footer
         <>
           <PhotosList photos={photos} onEnlargePhoto={handleEnlargePhoto} />
           <Footer />
@@ -150,22 +150,28 @@ export default function Gallery() {
   );
 }
 
-function PhotosList({ photos, onEnlargePhoto }) {   // props: photos, onEnlargePhoto
+function PhotosList({ photos, onEnlargePhoto }) {
+  // props: photos, onEnlargePhoto
   return (
     <ul className="gallery">
-      {photos.map((photo) => (    // maps each photo to a Photo component
-        <Photo    // renders a Photo component for each photo
-          photo={photo.photoLink}
-          description={photo.description}
-          key={photo.id}
-          onClick={() => onEnlargePhoto(photo.id)}
-        />
-      ))}
+      {photos.map(
+        (
+          photo // maps each photo to a Photo component
+        ) => (
+          <Photo // renders a Photo component for each photo
+            photo={photo.photoLink}
+            description={photo.description}
+            key={photo.id}
+            onClick={() => onEnlargePhoto(photo.id)}
+          />
+        )
+      )}
     </ul>
   );
 }
 
-function Photo({ photo, description, onClick }) {   // props: photo, description, onClick
+function Photo({ photo, description, onClick }) {
+  // props: photo, description, onClick
   return (
     <li>
       <img src={photo} alt={description} onClick={onClick} />
@@ -173,7 +179,8 @@ function Photo({ photo, description, onClick }) {   // props: photo, description
   );
 }
 
-function EnlargedPhoto({ photo, description, onClose }) {   // props: photo, description, onClose
+function EnlargedPhoto({ photo, description, onClose }) {
+  // props: photo, description, onClose
   return (
     <>
       <div className="enlarged-photo-container">
