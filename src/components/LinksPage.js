@@ -63,6 +63,12 @@ const socials = [
 const fullLengthVideos = [
   // array of objects containing full-length video information
   {
+    id: "cropdust",
+    video: "CROP DUST",
+    year: "2024",
+    youtubeUrl: "https://www.youtube.com/watch?v=Ml5pKZIncjY&t=1s",
+  },
+  {
     id: "nowadays",
     video: "NOWADAYS",
     year: "2021",
@@ -176,13 +182,10 @@ function FullLengthVideos({ video, year, youtubeUrl, vimeoUrl }) {
               className="full-length-video-links"
             >
               <span>
-                <FontAwesomeIcon className="youtube-icon" icon={faYoutube} />{" "}
                 {/* displays YouTube icon if present */}
-                {video}
-                <span>
-                  <i>{`(${year})`}</i>{" "}
-                  {/* displays video title and release year */}
-                </span>
+                <FontAwesomeIcon className="youtube-icon" icon={faYoutube} />
+                {/* displays video title and release year */}
+                {video} <i>{`(${year})`}</i>
               </span>
             </Link>
           )}
@@ -193,12 +196,9 @@ function FullLengthVideos({ video, year, youtubeUrl, vimeoUrl }) {
               className="full-length-video-links"
             >
               <span>
-                <FontAwesomeIcon className="vimeo-icon" icon={faVimeo} />{" "}
                 {/* displays Vimeo icon if present*/}
-                {video}
-              </span>
-              <span>
-                <i>{`(${year})`}</i>
+                <FontAwesomeIcon className="vimeo-icon" icon={faVimeo} />
+                {video} <i>{`(${year})`}</i>
               </span>
             </Link>
           )}
