@@ -265,7 +265,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .enlarged-photo {
-    max-width: 92%;
+    max-width: 97%;
     margin: 20px auto;
     margin-top: 10px;
   }
