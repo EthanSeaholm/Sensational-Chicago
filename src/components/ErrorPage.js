@@ -1,6 +1,6 @@
 import { useRouteError, Link } from "react-router-dom";
 
-/** 
+/**
  * This component renders an error message and a "Home" button in case of a routing error.
  * The "Home" button directs users back to the homepage.
  * @returns {ReactNode} A React element that renders the error message and "Home" button.
@@ -20,7 +20,7 @@ export default function ErrorPage() {
         </i>
       </p>
       <span>
-        <Link to="/">
+        <Link to="/home">
           <u className="error-home-button">Home</u>
         </Link>
       </span>

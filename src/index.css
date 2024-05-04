@@ -17,6 +17,61 @@
   margin: 20px;
 }
 
+.enter-page {
+  font-size: 26px;
+  margin-top: 100px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.enter-page span {
+  margin: 0px;
+}
+
+.trapdoor-fade {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.trapdoor-fade.loaded {
+  opacity: 1;
+}
+
+.enter-button-fade {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.enter-button-fade.loaded {
+  opacity: 1;
+}
+
+.enter-button:hover {
+  transition: 0.3s ease;
+  color: red;
+}
+
+/* for mobile scaling */
+@media (max-width: 767px) {
+  .enter-page {
+    font-size: 20px;
+    margin-top: 100px;
+  }
+
+  .trapdoor-fade,
+  .enter-button-fade {
+    margin: 10px;
+  }
+}
+
 .navbar {
   color: white;
   display: flex;
@@ -299,6 +354,8 @@
 
 .error-home-button,
 .error-home-button:visited,
+.enter-button,
+.enter-button:visited,
 .white-text {
   color: white;
 }

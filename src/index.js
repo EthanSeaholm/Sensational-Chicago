@@ -8,25 +8,33 @@ import LinksPage from "./components/LinksPage";
 import Gallery from "./components/Gallery";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import EnterPage from "./components/EnterPage";
 
 /**
  * This React Application is routed via React Router.
- * The main routes include the Homepage, Links page, and Gallery page.
+ * The main routes include the Enter page, Homepage, Links page, and Gallery page.
  */
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <EnterPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/home",
     element: <App />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/links",
     element: <LinksPage />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/gallery",
     element: <Gallery />,
+    errorElement: <ErrorPage />,
   },
 ]);
 

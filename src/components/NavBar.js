@@ -13,7 +13,7 @@ export default function NavBar() {
   return (
     <>
       <nav>
-        {location.pathname === "/" ? ( // if the user is on the homepage, render "slimesational" logo
+        {location.pathname === "/home" ? ( // if the user is on the homepage, render "slimesational" logo
           <div className="slimesational-logo">
             <img
               src="/slimesational.png"
@@ -23,7 +23,7 @@ export default function NavBar() {
           </div>
         ) : (
           // if the user is not on the homepage, render "trapdoor" logo
-          <Link to="/" className="trapdoor">
+          <Link to="/home" className="trapdoor">
             <img
               src="/trapdoor_orig.png"
               alt=""
