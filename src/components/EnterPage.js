@@ -33,22 +33,26 @@ export default function EnterPage() {
   }, []);
 
   return (
-    <div className="enter-page">
-      <img
-        src="/trapdoor_orig.png"
-        alt=""
-        style={{ width: "300px", height: "auto" }}
-        className={imgLoaded ? "trapdoor-fade loaded" : "trapdoor-fade"}
-      />
-      <Link to="/home">
-        <span
-          className={
-            enterButtonLoaded ? "enter-button-fade loaded" : "enter-button-fade"
-          }
-        >
-          <u className="enter-button">ENTER</u>
-        </span>
-      </Link>
+    <div className="enter-page-container">
+      <div className="enter-page">
+        <img
+          src="/trapdoor_orig.png"
+          alt=""
+          style={{ width: "300px", height: "auto" }}
+          className={imgLoaded ? "trapdoor-fade loaded" : "trapdoor-fade"}
+        />
+        <Link to="/home">
+          <span
+            className={
+              enterButtonLoaded
+                ? "enter-button-fade loaded"
+                : "enter-button-fade"
+            }
+          >
+            <u className="enter-button">ENTER</u>
+          </span>
+        </Link>
+      </div>
     </div>
   );
 }
