@@ -49,7 +49,7 @@ export default function NavBar() {
               rel="noopener noreferrer"
               className="white-text"
             >
-              Merch
+              Stuff
             </a>
           </li>
           <li>
