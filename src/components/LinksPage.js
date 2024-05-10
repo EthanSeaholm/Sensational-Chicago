@@ -69,6 +69,12 @@ const fullLengthVideos = [
     youtubeUrl: "https://www.youtube.com/watch?v=Ml5pKZIncjY&t=1s",
   },
   {
+    id: "binky",
+    video: "BINKY",
+    year: "2022",
+    youtubeUrl: "https://m.youtube.com/watch?v=lKjFuygKWDM",
+  },
+  {
     id: "nowadays",
     video: "NOWADAYS",
     year: "2021",
