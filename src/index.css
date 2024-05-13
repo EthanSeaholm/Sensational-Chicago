@@ -1,3 +1,4 @@
+/* global styling */
 * {
   box-sizing: border-box;
   background-color: rgb(10, 10, 10);
@@ -17,6 +18,7 @@
   margin: 20px;
 }
 
+/* enter page styling */
 .enter-page {
   font-size: 26px;
   margin-top: 160px;
@@ -54,8 +56,12 @@
   opacity: 1;
 }
 
+.enter-button {
+  color: white;
+  transition: color 0.3s ease;
+}
+
 .enter-button:hover {
-  transition: 0.4s ease;
   color: red;
 }
 
@@ -96,6 +102,7 @@
   }
 }
 
+/* navbar styling */
 .navbar {
   color: white;
   display: flex;
@@ -116,6 +123,7 @@
 
 .navbar a {
   text-decoration: none;
+  transition: 0.2s ease;
 }
 
 .navbar a:visited {
@@ -123,7 +131,6 @@
 }
 
 .navbar a:hover {
-  transition: 0.2s ease;
   color: red;
 }
 
@@ -131,11 +138,13 @@
   color: red !important;
 }
 
+/* loader styling */
 .loader-text {
   color: white;
   font-size: 26px;
 }
 
+/* unused page title styling */
 .page-title {
   color: white;
   font-size: x-large;
@@ -146,6 +155,7 @@
   font-style: italic;
 }
 
+/* homepage/video player styling */
 .video-player-container {
   display: grid;
   place-items: center;
@@ -163,11 +173,11 @@
 
 .video-player-container a {
   text-decoration: none;
+  transition: 0.2s ease;
   color: red;
 }
 
 .video-player-container a:hover {
-  transition: 0.2s ease;
   color: rgb(120, 120, 120);
 }
 
@@ -179,6 +189,7 @@
   border: 2px solid rgb(80, 80, 80);
 }
 
+/* links page styling */
 .links-list-container {
   color: white;
   font-size: 24px;
@@ -246,24 +257,27 @@
   }
 }
 
+/* icon styling within links page*/
 .instagram-icon {
   color: #ff00ff;
   padding-right: 5px;
+  transition: 0.2s ease;
 }
 
 .youtube-icon {
   color: #ff0000;
   padding-right: 4px;
+  transition: 0.2s ease;
 }
 
 .vimeo-icon {
   color: #1ab7ea;
   margin-right: 5px;
+  transition: 0.2s ease;
 }
 
 .instagram-icon:hover,
 .youtube-icon:hover {
-  transition: 0.2s ease;
   color: rgb(120, 120, 120);
 }
 
@@ -276,9 +290,7 @@
   color: white;
 }
 
-.full-length-video-links,
-.youtube-icon,
-.vimeo-icon {
+.full-length-video-links {
   text-decoration: none;
   transition: 0.2s ease;
 }
@@ -292,6 +304,7 @@
   color: rgb(120, 120, 120);
 }
 
+/* gallery styling */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -310,12 +323,12 @@
   margin: auto;
   padding-left: 0;
   border: 2px solid rgb(80, 80, 80);
+  transition: 0.2s ease;
   margin-bottom: 30px;
   cursor: pointer;
 }
 
 .gallery img:hover {
-  transition: 0.2s ease;
   border: 2px solid red;
 }
 
@@ -359,16 +372,17 @@
 
 .close-button {
   color: red;
+  transition: 0.2s ease;
   margin-top: 18px;
   margin-bottom: 0;
   cursor: pointer;
 }
 
 .close-button:hover {
-  transition: 0.2s ease;
   color: rgb(120, 120, 120);
 }
 
+/* error page styling */
 .error {
   font-size: 26px;
   margin-top: 100px;
@@ -377,19 +391,22 @@
   place-items: center;
 }
 
-.error-home-button,
 .error-home-button:visited,
-.enter-button,
 .enter-button:visited,
 .white-text {
   color: white;
 }
 
-.error-home-button:hover {
+.error-home-button {
   transition: 0.2s ease;
+  color: white;
+}
+
+.error-home-button:hover {
   color: rgb(120, 120, 120);
 }
 
+/* footer styling */
 .footer {
   color: rgb(60, 60, 60);
   display: flex;
@@ -404,6 +421,7 @@
 
 .footer a {
   text-decoration: none;
+  transition: 0.2s ease;
   color: rgb(60, 60, 60);
 }
 
@@ -412,6 +430,5 @@
 }
 
 .footer a:hover {
-  transition: 0.2s ease;
   color: red;
 }
