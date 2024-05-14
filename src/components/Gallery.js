@@ -18,8 +18,9 @@ import photo14 from "../gallery-resources/photos/p14.jpg";
 import photo15 from "../gallery-resources/photos/p15.jpg";
 import photo16 from "../gallery-resources/photos/p16.jpg";
 import photo17 from "../gallery-resources/photos/p17.jpg";
-import photo18 from "../gallery-resources/photos/p18.jpg";
+// import photo18 from "../gallery-resources/photos/p18.jpg";
 import photo19 from "../gallery-resources/photos/p19.jpg";
+import photo20 from "../gallery-resources/photos/p20.jpg";
 import { useState } from "react";
 
 /**
@@ -43,9 +44,10 @@ const photos = [
   //     "(L to R) Thomas, Josh, Rex, & Jonathan - Camping in Wisconsin, Summer 2022.",
   // },
   {
-    id: 19,
-    photoLink: photo19,
-    description: "Thomas & Rex - Camping in Wisconsin, Summer 2022.",
+    id: 16,
+    photoLink: photo16,
+    description:
+      "(L to R) Jonathan, Devan, Josh, Thomas, & Rex - Fry the Coop, Summer 2021.",
   },
   {
     id: 2,
@@ -54,10 +56,9 @@ const photos = [
       "(L to R) Neil, Jonathan, Thomas, Ethan, & Josh - Josh's 22nd birthday at his house, Summer 2021.",
   },
   {
-    id: 16,
-    photoLink: photo16,
-    description:
-      "(L to R) Jonathan, Devan, Josh, Thomas, & Rex - Fry the Coop, Summer 2021.",
+    id: 19,
+    photoLink: photo19,
+    description: "Thomas & Rex - Camping in Wisconsin, Summer 2022.",
   },
   {
     id: 4,
@@ -83,9 +84,9 @@ const photos = [
   //     "(L to R) Rex, Josh, Thomas, & Jonathan - New Year's Eve in Marco Island, FL, 2020.",
   // },
   {
-    id: 18,
-    photoLink: photo18,
-    description: "Jonathan & Josh - Fishing in Elgin, IL, Summer 2022.",
+    id: 20,
+    photoLink: photo20,
+    description: "Neil & the essentials - Camping in Wisconsin, Summer 2022.",
   },
   // {
   //   id: 8,
